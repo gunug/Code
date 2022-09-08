@@ -9,6 +9,7 @@ public class QueueStackList : MonoBehaviour
     public Queue<GameObject> queue_gameobject;
     public Stack<GameObject> stack_gameobject;
     public List<GameObject> list_gameobject;
+    public GameObject[] gameObjects = new GameObject[20]();
     public void Start(){
         queue_gameobject.Enqueue(new GameObject()); //끝 부분에 추가(큐에 추가됨)
         GameObject one_gameobject = queue_gameobject.Dequeue(); //시작 부분에서 반환(큐에서 제거됨)
