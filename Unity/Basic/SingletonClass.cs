@@ -14,7 +14,7 @@ public class SingletonClass : MonoBehaviour
     public Awake(){
         init();
     }
-    
+
     public SingletonClass init(){
         if(instance == null){
             instance = new SingletonClass();
