@@ -1,0 +1,338 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+     <title>layout2</title>
+     <meta name="keywords" content="키워드내용" />
+     <meta name="subject" content="문서 제목 정보" />
+     <meta name="descriptioin" content="웹 페이지 요약 정보" />
+     <meta name="author" content="제작자 정보" />
+     <meta name="robots" content="검색 로봇 제어" />
+     <meta name="copyright" content="저작권 정보" />
+
+     <style type="text/css">
+     /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126 License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+     /* ==================================================== */
+      body{
+        margin:0px;
+        min-width: 600px;
+      }
+      #wrap{
+        background-color: #000000;
+        position: relative;
+        overflow: auto;
+      }
+      #wrap div,#wrap ul, #wrap li{
+        /*border: solid 1px #888;*/
+        margin-left: 0px;
+        padding: 5px;
+      }
+      #wrap h1{
+        margin: 0px;
+      }
+      #wrap h1, #wrap h2{
+        border-style:none;
+        background-color:transparent;
+        text-indent: 0px;
+        /* margin:0px; */
+        padding: 0px;
+        /*font-size: 20px;*/
+      }
+      #wrap img{
+        width:200px;
+      }
+      #wrap #main_visual{
+        background-image: url("images/layout2_visual.jpg");
+        padding: 0px;
+      }
+      #wrap #header{
+        background-color:#02918c;
+      }
+      #wrap .icon{
+        width: 50px;
+        max-height: 50px;
+      }
+      #header #first{
+        color:#ffffff;
+      }
+      #header #last{
+        color:#cfc91d;
+      }
+      #header li{
+        color:#ffffff;
+        font-size:9px;
+        list-style: none;
+        float: left;
+      }
+      #header ul{
+        position:relative;
+        overflow: auto;
+        margin: 0px;
+      }
+      #header h1{
+        float:left;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      #header ul{
+        float:right;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      #header{
+        position: relative;
+        overflow: auto;
+      }
+      #main_visual{
+        height: 730px;
+        width: 100%;
+        /*background-attachment: scroll; */
+        /*background-attachment: fixed; */
+
+        /*background-repeat : repeat;*/
+        background-repeat : no-repeat;
+        /*background-repeat : repeat-x;*/
+        /*background-repeat : repeat-y;*/
+
+        background-size: auto 740px;
+        background-position: 50% 50%;
+        text-align: center;
+
+        position: relative;
+        overflow: auto;
+      }
+      #visual_text1{
+        color: white;
+        font-size: 28px;
+      }
+      #visual_text2{
+        color: white;
+        font-size: 50px;
+        letter-spacing: 10px;
+      }
+      #visual_text3{
+        color: white;
+        font-size: 18px;
+      }
+      #visual_button{
+        margin-top: 124px;
+      }
+      #visual_container{
+        /*margin-top : 730 - 340 / 2;*/
+        margin-top : 195px;
+        margin-bottom : 195px;
+      }
+      #content1{
+        background-color: white;
+      }
+      #content2{
+        background-color: white;
+      }
+      h2{
+        text-align: center;
+        color: #02918c;
+        font-size: 32px;
+        margin-top:95px;
+        margin-bottom:95px;
+      }
+      .sub_title{
+        text-align: center;
+        font-size: 16px;
+        line-height: 25px;
+        margin-top : 80px;
+        margin-bottom :80px;
+      }
+      #content1 li{
+        list-style: none;
+        float:left;
+        width : 290px;
+        padding: 0px;
+        text-align: center;
+        /*250-190/2*/
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-right: solid 1px #d9dbdb;
+      }
+      #content1 li:last-child{
+        border-style: none;
+      }
+      #content1 ul{
+        max-width: 1165px;
+        width : 100%;
+        position: relative;
+        overflow: auto;
+        margin: auto;
+        margin: auto;
+      }
+      #content1{
+        clear:both;
+      }
+      #content1 dt{
+        margin: 0px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+      #content1 dd{
+        margin: 0px;
+        font-size: 10px;
+      }
+      #content2 ul{
+        position: relative;
+        overflow: auto;
+        padding: 0px;
+      }
+      #content2 li{
+        list-style: none;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 25%;
+      }
+      #content2 li .pic{
+        width:100%;
+        display:block;
+      }
+     </style>
+   </head>
+   <body>
+      <div id="wrap">
+        <div id="header">
+          <h1><span id="first">MY</span><span id="last">FOLIO</span></h1>
+          <ul>
+            <li>HOME</li>
+            <li>ABOUT ME</li>
+            <li>SERVICE</li>
+            <li>MY WORK</li>
+            <li>CONTACT ME</li>
+          </ul>
+        </div>
+        <div id="main_visual">
+          <div id="visual_container">
+            <div id="visual_text1">Lorem ipsum dolor sit iusmod tempor</div>
+            <div id="visual_text2">INCIDIDUNT BORE</div>
+            <div id="visual_text3">Orem ipsum dolor sit amet, consectetur</div>
+            <img id="visual_button" src="/kaywon/sub/img/layout_jpg/layout2_button.jpg">
+          </div>
+        </div>
+        <div id="content1">
+          <h2>ABOUT ME</h2>
+          <div class="sub_title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et <br /> dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea <br /> commodo consequat 
+            duis aute irure dolor.
+          </div>
+          <ul>
+            <li>
+              <img class="icon" src="images/layout2_icon1.jpg" />
+              <dl>
+                <dt>Title goes here</dt>
+                <dd>
+                  onsectetur adipisicing elit, sedo eiusmod <br />tempor 
+                  incidi <br />et dolorerserss eerhfre mag.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <img class="icon"  src="images/layout2_icon2.jpg" />
+              <dl>
+                <dt>Title goes here</dt>
+                <dd>
+                  onsectetur adipisicing elit, sedo eiusmod <br />tempor 
+                  incidi <br />et dolorerserss eerhfre mag.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <img class="icon"  src="images/layout2_icon3.jpg" />
+              <dl>
+                <dt>Title goes here</dt>
+                <dd>
+                  onsectetur adipisicing elit, sedo eiusmod <br />tempor 
+                  incidi <br />et dolorerserss eerhfre mag.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <img class="icon"  src="images/layout2_icon4.jpg" />
+              <dl>
+                <dt>Title goes here</dt>
+                <dd>
+                  onsectetur adipisicing elit, sedo eiusmod <br />tempor 
+                  incidi <br />et dolorerserss eerhfre mag.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <div id="content2">
+          <h2>MY WORK</h2>
+          <div class="sub_title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor <br /> incididunt ut labore et dolore magna 
+            aliqua.
+          </div>
+          <ul>
+            <li><img class="pic" src="images/layout2_pic1.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic2.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic3.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic4.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic5.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic6.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic7.jpg" /></li>
+            <li><img class="pic" src="images/layout2_pic8.jpg" /></li>
+          </ul>
+        </div>
+      </div>
+   </body>
+</html>
