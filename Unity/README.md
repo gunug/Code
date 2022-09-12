@@ -7,7 +7,7 @@
 * Open folder를 이용하여 새 폴터를 오픈
 * cmd에서 dotnet new console 입력하여 새 프로젝트를 폴더에 세팅
 * cmd에서 dotnet run입력하면 Program.cs가 수행됨
-'''
+```
   using System.IO;
   
   namespace root{
@@ -21,6 +21,6 @@
         }        
     }
   }
-'''
+```
 * https://docs.microsoft.com/ko-kr/dotnet/csharp/
 * https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/?WT.mc_id=dotnet-35129-website
