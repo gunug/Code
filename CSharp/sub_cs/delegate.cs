@@ -5,9 +5,9 @@ namespace root{
             // Instantiate the delegate.
             Del d1 = DelegateMethod;
             Del d2 = DelegateMethod2;
-            Del handler = d1 + d2; //대리자를 덧샘으로 추가 가능
+            Del handler = d1 + d2; //대리자를 덧셈으로 추가 가능
             handler += d2; //가산식 적용가능
-            // 뺄샘이나 감산식 적용가능
+            // 뺄셈이나 감산식 적용가능
 
             // Call the delegate.
             handler("delegate sample activate!");
