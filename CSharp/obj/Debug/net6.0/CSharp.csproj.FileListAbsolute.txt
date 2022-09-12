@@ -1,0 +1,15 @@
+E:\GitHub_Code\Code\CSharp\bin\Debug\net6.0\CSharp.exe
+E:\GitHub_Code\Code\CSharp\bin\Debug\net6.0\CSharp.deps.json
+E:\GitHub_Code\Code\CSharp\bin\Debug\net6.0\CSharp.runtimeconfig.json
+E:\GitHub_Code\Code\CSharp\bin\Debug\net6.0\CSharp.dll
+E:\GitHub_Code\Code\CSharp\bin\Debug\net6.0\ref\CSharp.dll
+E:\GitHub_Code\Code\CSharp\bin\Debug\net6.0\CSharp.pdb
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.csproj.AssemblyReference.cache
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.AssemblyInfoInputs.cache
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.AssemblyInfo.cs
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.csproj.CoreCompileInputs.cache
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.dll
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\ref\CSharp.dll
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.pdb
+E:\GitHub_Code\Code\CSharp\obj\Debug\net6.0\CSharp.genruntimeconfig.cache
