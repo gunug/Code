@@ -1,5 +1,5 @@
 # C# 자습서
-https://docs.microsoft.com/ko-kr/dotnet/csharp/language-reference/builtin-types/struct?source=recommendations
+https://docs.microsoft.com/ko-kr/dotnet/csharp/
 # Visual Studio Code 셋팅 
 * https://code.visualstudio.com/docs/languages/csharp
 * Ctrl+Shift+X  'C#' 검색
