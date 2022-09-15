@@ -18,6 +18,10 @@ namespace root{
             Console.WriteLine("invocationCount:"+invocationCount);
         }
 
+        public void CallBackFunction(){
+            Console.WriteLine("call back function activate!");
+        }
+
         public delegate void Del(string message); //대리자 선언
 
         public static void DelegateMethod(string message){
