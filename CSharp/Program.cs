@@ -8,6 +8,8 @@
 
             delegate_sample del_sam = new delegate_sample();
             del_sam.init();
+
+            generic_sample.CallShow();
         }
         static void Sub(){
             Console.WriteLine("Hello, World!");
