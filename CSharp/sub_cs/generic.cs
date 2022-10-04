@@ -9,4 +9,12 @@ namespace root{
             ShowText("A","B");
         }
     }
+
+    public class generic_class<T>{
+        
+        static T test;
+        public generic_class(T i1, T i2){
+            
+        }
+    }
 }
