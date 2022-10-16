@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>중간평가</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                /*767px 이하 = 기본환경 = 스마트폰*/
+                background-color: lightpink;
+                margin: 0px;
+            }
+            #title{
+                background-color: darkblue;
+                color:white;
+                font-size: 40px;
+                text-align: center;
+            }
+            #respon1 div{
+                float:left;
+                width: 100%;
+            }
+            #respon2{
+                display: flex; /* 화면출력: 유연하게 */
+                flex-flow: row wrap; /* 유연한-흐름: 행 줄내림 */
+            }
+            #respon2 div{
+                width: 100%;
+            }
+            #respon3{
+                display: flex;
+                flex-flow: row wrap;
+            }
+            #respon3 div{
+                width: 100%;
+            }
+            #respon3 #content_left{
+                background-color: hotpink;
+            }
+            #respon3 #content_right{
+                background-color: lightsalmon;
+            }
+            #respon3 #content1{
+                background-color: lightslategrey;
+            }
+            #respon3 #content2{
+                background-color:lightgreen;
+            }
+            #respon1 #content1{
+                background-color:darksalmon;
+            }
+            #respon1 #content2{
+                background-color:floralwhite;
+            }
+            #respon1 #content3{
+                background-color:khaki;
+            }
+            #respon2 #content1{
+                background-color:darksalmon;
+            }
+            #respon2 #content2{
+                background-color:floralwhite;
+            }
+            #respon2 #content3{
+                background-color:khaki;
+            }
+            .clearfix::after{
+                content:"";
+                clear:both; /*float 해제: 양쪽*/
+                display:table;
+            }
+            #respon1 div, #respon2 div, #respon3 div{
+                min-height: 150px;
+            }
+            @media only screen and (min-width:767px){
+                /*적어도 767픽셀은 되어야 한다 = 767픽셀 이상 = 타블렛*/
+                body{
+                    background-color: lightskyblue;
+                }
+                #title{
+                }
+                #respon1 #content1{ width: 40%; }
+                #respon1 #content2{ width: 60%; }
+                #respon1 #content3{ width: 100%; }
+
+                #respon2 #content1{ width: 40%; }
+                #respon2 #content2{ width: 60%; }
+                #respon2 #content3{ width: 100%; }
+
+                #respon3 #content_left{ width: 20% }
+                #respon3 #content_right{ width: 80% }
+            }
+            @media only screen and (min-width:1024px){ /*컴퓨터*/
+                body{
+                    background-color:lightyellow;
+                }
+                #title{
+                    font-size: 80px;
+                    letter-spacing: 40px;
+                }
+                #respon1 #content1{ width: 30%; }
+                #respon1 #content2{ width: 40%; }
+                #respon1 #content3{ width: 30%; }
+
+                #respon2 #content1{ width: 30%; }
+                #respon2 #content2{ width: 40%; }
+                #respon2 #content3{ width: 30%; }
+            }
+            @media only screen and (min-width:1920px){ /*FHD이상 = 2k, 4k*/
+                body{
+                    background-color: lightseagreen;
+                }
+                #title{
+                    width: 1920px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="visual">
+            <div id="title">MY MIDDLE TEST</div>
+        </div>
+
+        <div id="respon1" class="clearfix">
+            <div id="content1">content1</div>
+            <div id="content2">content2</div>
+            <div id="content3">content3</div>
+        </div>
+        
+        <div id="respon2" class="clearfix">
+            <div id="content1">content1</div>
+            <div id="content2">content2</div>
+            <div id="content3">content3</div>
+        </div>
+
+        <div id="respon3">
+            <div id="content_left">left</div>
+            <div id="content_right">
+                <div id="content1">content1</div>
+                <div id="content2">content2</div>
+            </div>
+        </div>
+    </body>
+</html>

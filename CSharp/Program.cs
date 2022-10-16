@@ -23,6 +23,9 @@
 
             Console.WriteLine("---------------");
             array_example.array_sample();
+
+            Console.WriteLine("---------------");
+            lambda.start_lambda();
         }
         static void Sub(){
             Console.WriteLine("Hello, World!");
