@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid</title>
+        <meta charset="utf-8" />
+        <style>
+            #grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 200px); /* 줄맞추기-유형-행: 반복(자동채움, 넓이);*/
+                align-items: stretch; /* 잡아늘임 */
+                align-items: start; /* 내용에 맞춤 */
+            }
+            #grid div{
+                background-color: aquamarine;
+                border: solid 1px black;
+                width: 200px;
+            }
+            #flex{
+                display: flex;
+                flex-flow: row wrap;
+                align-items: start; /* 내용에 맞춤 */
+            }
+            #flex div{
+                background-color: burlywood;
+                border: solid 1px black;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="grid">
+            <div>content1 content1 content1 content1content1content1</div>
+            <div>content2</div>
+            <div>content3 content3 content3content3</div>
+            <div>content4</div>
+            <div>content5 content5 content5 content5 content5 content5 content5 content5 content5 content5 content5 content5</div>
+            <div>content6</div>
+            <div>content1</div>
+            <div>content2</div>
+            <div>content3</div>
+            <div>content4</div>
+            <div>content5</div>
+            <div>content6</div>
+        </div>
+
+        <div id="flex">
+            <div>content1 content1 content1 content1content1content1</div>
+            <div>content2</div>
+            <div>content3 content3 content3content3</div>
+            <div>content4</div>
+            <div>content5 content5 content5 content5 content5 content5 content5 content5 content5 content5 content5 content5</div>
+            <div>content6</div>
+            <div>content1</div>
+            <div>content2</div>
+            <div>content3</div>
+            <div>content4</div>
+            <div>content5</div>
+            <div>content6</div>
+        </div>
+    </body>
+</html>
