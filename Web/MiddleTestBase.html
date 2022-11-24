@@ -1,146 +1,116 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>중간평가</title>
+        <title> 000의 중간평가 - 주제명</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0"/>
+        <!-- 뷰포트 설정, 넓이=장치-넓이, 기준-크기=배율 -->
         <style>
-            body{
-                /*767px 이하 = 기본환경 = 스마트폰*/
-                background-color: lightpink;
+            h1{ 
+                background-color: navy; 
+                color: white;
                 margin: 0px;
+                padding: 20px;
             }
-            #title{
-                background-color: darkblue;
-                color:white;
-                font-size: 40px;
-                text-align: center;
-            }
-            #respon1 div{
-                float:left;
+            #respon_float div{
+                float: left; /*왼쪽부터 둥둥 떠다니게*/
+                /* width: calc(100%/3); */
                 width: 100%;
             }
-            #respon2{
-                display: flex; /* 화면출력: 유연하게 */
-                flex-flow: row wrap; /* 유연한-흐름: 행 줄내림 */
+            #respon_flex{
+                display: flex; /* 표시방식: 유연함 */
+                flex-flow: row wrap; /* 유연한-흐름: 행방향 줄바꿈 */
             }
-            #respon2 div{
-                width: 100%;
+            #respon_flex2{
+                display: flex; /* 표시방식: 유연함 */
+                flex-flow: row wrap; /* 유연한-흐름: 행방향 줄바꿈 */
             }
-            #respon3{
-                display: flex;
-                flex-flow: row wrap;
+            #respon_flex2 div{ width: 100%; }
+            #respon_flex div{ width: 100%; }
+            #respon_flex div:nth-child(1){
+                background-color: aquamarine;
             }
-            #respon3 div{
-                width: 100%;
+            #respon_flex div:nth-child(2){
+                background-color:blanchedalmond;
             }
-            #respon3 #content_left{
-                background-color: hotpink;
+            #respon_flex div:nth-child(3){
+                background-color:darkkhaki;
             }
-            #respon3 #content_right{
-                background-color: lightsalmon;
+            #respon_float div:nth-child(1){
+                background-color: aquamarine;
             }
-            #respon3 #content1{
-                background-color: lightslategrey;
+            #respon_float div:nth-child(2){
+                background-color:blanchedalmond;
             }
-            #respon3 #content2{
-                background-color:lightgreen;
+            #respon_float div:nth-child(3){
+                background-color:darkkhaki;
             }
-            #respon1 #content1{
-                background-color:darksalmon;
+            #respon_flex2 div:first-child{background-color:blue;}
+            #respon_flex2 div:last-child{background-color:brown;}
+            #flex_right>div:first-child{
+                background-color: beige;
             }
-            #respon1 #content2{
-                background-color:floralwhite;
-            }
-            #respon1 #content3{
-                background-color:khaki;
-            }
-            #respon2 #content1{
-                background-color:darksalmon;
-            }
-            #respon2 #content2{
-                background-color:floralwhite;
-            }
-            #respon2 #content3{
-                background-color:khaki;
+            #flex_right>div:last-child{
+                background-color:greenyellow;
             }
             .clearfix::after{
                 content:"";
                 clear:both; /*float 해제: 양쪽*/
                 display:table;
             }
-            #respon1 div, #respon2 div, #respon3 div{
+            /*0~767스마트폰, 768~1023타블렛, 
+            1024~1919컴퓨터(FHD), 1920~ 2k, 4k */
+            @media only screen and (min-width:768px){
+                /*타블렛*/
+                h1{ font-size: 40px; }
+                #respon_float div{ width: 50% }
+                #respon_float div:last-child{ width: 100% }
+                #respon_flex div{ width: 50% }
+                #respon_flex div:last-child{ width: 100% }
+                #respon_flex2>div{ width: 30% }
+                #respon_flex2>div:last-child{ width: 70% }
+            }
+            #respon_float div, #respon_flex div, #respon_flex2 div{
                 min-height: 150px;
             }
-            @media only screen and (min-width:767px){
-                /*적어도 767픽셀은 되어야 한다 = 767픽셀 이상 = 타블렛*/
-                body{
-                    background-color: lightskyblue;
-                }
-                #title{
-                }
-                #respon1 #content1{ width: 40%; }
-                #respon1 #content2{ width: 60%; }
-                #respon1 #content3{ width: 100%; }
-
-                #respon2 #content1{ width: 40%; }
-                #respon2 #content2{ width: 60%; }
-                #respon2 #content3{ width: 100%; }
-
-                #respon3 #content_left{ width: 20% }
-                #respon3 #content_right{ width: 80% }
+            @media only screen and (min-width:1024px){
+                /*FHD 컴퓨터*/
+                h1{ text-align: center; color:bisque; }
+                #respon_float div{ width: calc(100%/3); }
+                #respon_float div:last-child{ width: calc(100%/3); }
+                #respon_flex div{ width: calc(100%/3); }
+                #respon_flex div:last-child{ width: calc(100%/3); }
             }
-            @media only screen and (min-width:1024px){ /*컴퓨터*/
-                body{
-                    background-color:lightyellow;
-                }
-                #title{
-                    font-size: 80px;
-                    letter-spacing: 40px;
-                }
-                #respon1 #content1{ width: 30%; }
-                #respon1 #content2{ width: 40%; }
-                #respon1 #content3{ width: 30%; }
-
-                #respon2 #content1{ width: 30%; }
-                #respon2 #content2{ width: 40%; }
-                #respon2 #content3{ width: 30%; }
-            }
-            @media only screen and (min-width:1920px){ /*FHD이상 = 2k, 4k*/
-                body{
-                    background-color: lightseagreen;
-                }
-                #title{
-                    width: 1920px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+            @media only screen and (min-width:1920px){
+                /*2K,4K모니터 */
+                h1{ text-shadow: 5px 5px 5px red;}
             }
         </style>
     </head>
     <body>
-
-        <div id="visual">
-            <div id="title">MY MIDDLE TEST</div>
-        </div>
-
-        <div id="respon1" class="clearfix">
-            <div id="content1">content1</div>
-            <div id="content2">content2</div>
-            <div id="content3">content3</div>
-        </div>
-        
-        <div id="respon2" class="clearfix">
-            <div id="content1">content1</div>
-            <div id="content2">content2</div>
-            <div id="content3">content3</div>
-        </div>
-
-        <div id="respon3">
-            <div id="content_left">left</div>
-            <div id="content_right">
-                <div id="content1">content1</div>
-                <div id="content2">content2</div>
+        <div id="wrap">
+            <header>
+                <h1> My Middle Test </h1>
+            </header>
+            <div id="content">
+                <div id="respon_float" class="clearfix">
+                    <div>content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                </div>
+                <div id="respon_flex">
+                    <div>content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                </div>
+                <div id="respon_flex2">
+                    <div>left</div>
+                    <div id="flex_right">
+                        <div>content1</div>
+                        <div>content2</div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
