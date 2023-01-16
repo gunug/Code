@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>기말평가</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0" />
+        <script src="javascript_sample.js"></script>
+        <script>
+            console.log("embeded");
+            function say_바로가기(){
+                console.log("넷플릭스 바로가기");
+                console.log("javascript");
+            }
+        </script>
+        <style>
+            body{
+                background-color: rgb(18, 10, 99);
+                margin: 0px;
+            }
+            header{
+                display: flex;
+                justify-content: space-between;
+            }
+            header>h1{
+                margin: 20px 20px;   
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                font-size: 500%;
+            }
+            header>ul{
+                display: flex;
+                margin: 23px 0px;
+                color: rgb(255, 255, 255);
+            }
+            header>ul>li{
+                list-style: none;
+                padding: 0px 20px;
+                color: rgb(255, 255, 255);
+            }
+            div>h2{
+                margin: 20px;
+                color: white;
+            }
+            div>p{
+                margin: 20px;
+                margin-bottom: 30px;
+                color: white;
+            }
+            #main_visual{
+                background-image: url("img1.gif");
+                background-repeat: no-repeat;
+                background-color: black;
+                background-position: 50% 50%; 
+                background-size: 700px 400px;
+                background-size: 100% 100%;
+                background-size: cover;
+                height: 50vw;
+                padding: 100px;
+            }
+            #main_visual>h2{
+                color: rgb(255, 255, 255);
+                font-size:  40px;
+                text-align: center;
+                font-weight:  bold;
+                letter-spacing: 10px;
+                background-color: rgba(225,225,225,40%);
+            }
+            #main_visual>p{
+                color: rgb(255, 255, 255);
+                text-align: center;
+                background-color: rgba(225,225,225,40%)
+            }
+            #image_frame{
+                width: 100%;
+                position: relative;
+                height: 50vw;
+                overflow: hidden;
+            }
+            #image_container{
+                width: 500%;
+                display: flex;
+                position: absolute;
+                height: 50vw;
+                transition: left 1s;
+            }
+            #image_container>div{
+                width: 20%;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+            }
+            #image_container>div:nth-child(1){
+                background-image: url("사펑1.jpg");
+            }
+            #image_container>div:nth-child(2){
+                background-image: url("사펑2.jpg");
+            }
+            #image_container>div:nth-child(3){
+                background-image: url("사펑3.jpg");
+            }
+            #image_container>div:nth-child(4){
+                background-image: url("사펑4.jpg");
+            }
+            #image_container>div:nth-child(5){
+                background-image: url("사펑5.jpg");
+            }
+            .content1{ left: 0%; }
+            .content2{ left: -100%; }
+            .content3{ left: -200%; }
+            .content4{ left: -300%; }
+            .content5{ left: -400%; }
+            
+            #image_button{
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+            }
+            #image_button>span{
+                background-color: rgba(255,255,255,80%);
+                border-radius: 20px;
+            }
+            #pc_nav{
+                margin: 20px;
+                display: flex;
+                display: none;
+                justify-content: space-between;
+                color:rgb(255, 255, 255);
+            }
+            #pc_nav>ul{
+                display: flex;
+                margin: 26px 0px;
+            }
+            #pc_nav>ul>li{
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #phone_nav{
+                margin: 20px;
+                color: white;
+            }
+            #phone_nav>ul>li{
+                list-style: none;
+            }
+            /* 기본값 : 스마트폰 ------------------------------------ */
+
+            @media only screen and (min-width : 768px){ 
+                header>h1{
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                }
+                #main_visual>h2{
+                text-align: center;
+                font-weight: bold;
+                }
+                #main_visual>p{
+                    text-align: left;
+                    background-color: rgba(225,225,225,40%)
+                }
+                #pc_nav{
+                    margin: 20px;
+                    display: flex;
+                    color: rgb(255, 255, 255);
+                }
+                #phone_nav{
+                    display: none;
+                }
+            }
+            /* 타블렛 : (1024 ~ 1919) ------------------------------------ */
+            
+            @media only screen and (min-width : 1024px){
+           
+            }
+            /* 컴퓨터 (1920 ~ ) ------------------------------------ */
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1>Cyberpunk</h1>
+                <ul>
+                    <li>Story</li>
+                    <li>Introduce</li>
+                    <li>Game</li>
+                    <li>NETFLIX</li>
+                </ul>
+            </header>
+            <nav id="pc_nav">
+                <h2>Characters</h2>
+                <ul>
+                    <li>Jackie Welles</li>
+                    <li>T-bug</li>
+                    <li>Viktor Vector</li>
+                    <li>Misty Olszewski</li>
+                    <li>Dexter DeShawn</li>
+                    <li>Kirk Sawyer</li>
+                </ul>
+            </nav>
+            <style>
+                #phone_ul{
+                    overflow: hidden;
+                    transition: height 1s;
+                }
+            </style>
+            <script>
+                var isOpen = false;
+                function open_close(){
+                    console.log("열림 닫힘");
+                    var target_ul = document.getElementById("phone_ul");
+                    if(isOpen == true){
+                        target_ul.style.height = "0px";
+                        isOpen = false;
+                    }else{
+                        target_ul.style.height = "160px";
+                        isOpen = true;
+                    }
+                }
+            </script>
+            <nav id="phone_nav" onclick="open_close();">
+                <h2>Characters</h2>
+                <ul id="phone_ul" style="height:0px;">
+                    <li>Jackie Welles</li>
+                    <li>T-bug</li>
+                    <li>Viktor Vector</li>
+                    <li>Misty Olszewski</li>
+                    <li>Dexter DeShawn</li>
+                    <li>Kirk Sawyer</li>
+                </ul>
+            </nav>
+            <div id="main_visual">
+                <h2>Cyberpunk 2077</h2>
+                <p>
+                    나이트 시티가 당신을 바꿔 놓을 것입니다
+
+                    사이버펑크 2077은 권력, 사치와 신체 개조에 집착하는 거대 도시 나이트 시티를 
+                    배경으로 한 오픈 월드, 액션 어드벤처 게임입니다.
+                </p>
+            </div>
+            <div id="image_frame">
+                <div id="image_container" class="content1">
+                    <div>content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                    <div>content4</div>
+                    <div>content5</div>
+                </div>
+                <div id="image_button">
+                    <span onclick="move_page(1)">1</span>
+                    <span onclick="move_page(2)">2</span>
+                    <span onclick="move_page(3)">3</span>
+                    <span onclick="move_page(4)">4</span>
+                    <span onclick="move_page(5)">5</span>
+                </div>
+            </div>
+            <script>
+                function move_page(index){
+                    console.log(index);
+                    var image_frame = document.getElementById("image_container");
+                    image_frame.className = "";
+                    image_frame.classList.add("content"+index);
+                }
+            </script>
+            <div id="content"> </div>
+            <footer></footer>
+            <button onclick="say_바로가기()">넷플릭스 바로가기</button>
+            <button onclick="console.log('inline');"
+                onmouseover="console.log('over');"
+                onmouseout="console.log('out');"
+            ></button>
+            <div>
+                <h2>플레이 소감</h2>
+                    <p>SF 문학 중 사이버펑크 장르를 옛날부터 좋아했다. 소설이나 만화, 영화 등등 좋아했는데,
+                    게임으로 플레이한 적은 없었다. 게임 플레이를 한 입장으로서 느낀 점은 여태 영화에서 보던 것들이
+                    3D로 아주 잘 구현되었다는 점이다. 'Cyberpunk 2077'은 애니메이션도 나왔는데, 작화나 연출 또한 잘 만들어졌다.
+                    주인공들의 캐릭터성 또한 잘 다져진 요소 중 하나다. 애니메이션 시청 이후로 게임을 접했는데,
+                    게임을 플레이하면서 세계관 구성도 뛰어난 게임이라고 느꼈다.
+                    </p>
+            </div>
+        </div>
+    </body>
+</html>
