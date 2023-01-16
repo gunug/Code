@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>기말평가</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0"/>
+        <style>
+            header{
+                display: flex;
+                justify-content: space-between;
+            }
+            header>h1{
+                margin: 10px 0px;
+                color: green;
+            }
+            header>ul{
+                display: flex;
+                margin: 18px 0px;
+            }
+            header>ul>li{
+                list-style: none;
+                padding: 0px 15px;
+            }
+            #main_visual{
+                background-image: url("background_image.jpg");
+                background-repeat: no-repeat;
+                background-color: black;
+                background-position: 50% 50%; /*가로x, 세로y */
+                background-size: 300px 400px;
+                background-size: 100% 100%;
+                background-size: cover;
+                height: 50vw;
+                /* vw, viewport-width 화면 넓이 */
+                padding: 100px;
+            }
+            #main_visual>h2{
+                font-size: 40px;
+                text-align: center;
+                font-weight: bold;
+                letter-spacing: 10px;
+                background-color: rgba(255,255,255,40%);
+            }
+            #main_visual>p{
+                text-align: center;
+                background-color: rgba(255,255,255,40%);
+            }
+            #image_frame{
+                width: 100%;
+                position: relative;
+                /* absolute 자식의 기준이 되도록 함*/
+                height: 50vw;
+                overflow: hidden;
+            }
+            #image_container{
+                width: 500%;
+                display: flex;
+                position: absolute; /*절대적인 위치*/
+                /* left right top bottom으로 위치지정 가능*/
+                height: 50vw;
+                transition: left 1s;
+            }
+            #image_container>div{
+                width: 20%;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover; 
+            }
+            #image_container>div:nth-child(1){
+                background-image: url("dog1.jpg");
+            }
+            #image_container>div:nth-child(2){
+                background-image: url("dog2.jpg");
+            }
+            #image_container>div:nth-child(3){
+                background-image: url("dog3.jpg");
+            }
+            #image_container>div:nth-child(4){
+                background-image: url("dog4.jpg");
+            }
+            #image_container>div:nth-child(5){
+                background-image: url("dog5.jpg");
+            }
+            .content1{ left: 0%; }
+            .content2{ left: -100%; }
+            .content3{ left: -200%; }
+            .content4{ left: -300%; }
+            .content5{ left: -400%; }
+
+            #image_button{
+                position:absolute;
+                bottom: 0px;
+                left: 50%;
+            }
+            #image_button>span{
+                background-color: rgba(255,255,255,80%);
+                border-radius: 20px;
+            }
+            #pc_nav{
+                display: flex;
+                display: none; /* 표시: 안함 */
+                justify-content: space-between;
+            }
+            #pc_nav>ul{
+                display: flex;
+                margin: 26px 0px;
+            }
+            #pc_nav>ul>li{
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #phone_nav>ul>li{
+                list-style: none;
+            }
+            /* 기본값 : 스마트폰 -------------------------- */
+
+            @media only screen and (min-width : 1024px){
+                header>h1{
+                    color: red;
+                    font-weight: normal;
+                }
+                #main_visual>h2{
+                    text-align: left;
+                }
+                #main_visual>p{
+                    text-align: left;
+                }
+                #pc_nav{
+                    display: flex;
+                }
+                #phone_nav{
+                    display: none;
+                }
+            }
+            /* 타블렛 (1024 ~ 1919) ---------------------- */
+
+            @media only screen and (min-width : 1920px){
+
+            }
+            /* 컴퓨터 (1920 ~ ) ---------------------- */
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1>Title</h1>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+            </header>
+            <nav id="pc_nav">
+                <h2>navigation</h2>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </nav>
+            <style>
+                #phone_ul{
+                    overflow: hidden;
+                    transition: height 1s;
+                }
+            </style>
+            <script>
+                var isOpen = false;
+                function open_close(){
+                    console.log("열림 닫힘");
+                    var target_ul = document.getElementById("phone_ul");
+                    if(isOpen == true){ //열려있음==진실, 열려있다면
+                        target_ul.style.height = "0px";
+                        isOpen = false; //열려있음이 거짓이라고 기록
+                    }else{ //아니라면, 닫혀있다면
+                        target_ul.style.height = "160px";
+                        isOpen = true; //열려있음이 진실이라고 기록
+                    }
+                }
+            </script>
+            <nav id="phone_nav" onclick="open_close();">
+                <h2>navigation</h2>
+                <ul id="phone_ul" style="height:0px;">
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </nav>
+            <div id="main_visual">
+                <h2>title1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit, 
+                    sed do eiusmod tempor incididunt
+                </p>
+            </div>
+            <div id="image_frame">
+                <div id="image_container" class="content1">
+                    <div>content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                    <div>content4</div>
+                    <div>content5</div>
+                </div>
+                <div id="image_button">
+                    <span onclick="move_page(1);">1</span>
+                    <span onclick="move_page(2);">2</span>
+                    <span onclick="move_page(3);">3</span>
+                    <span onclick="move_page(4);">4</span>
+                    <span onclick="move_page(5);">5</span>
+                </div>
+            </div>
+            <script>
+                function move_page(index){
+                    console.log(index);
+                    var image_frame = document.getElementById("image_container");
+                    /*대상 찾기*/
+                    image_frame.className = ""; //클래스 비우기
+                    image_frame.classList.add("content"+index); //클래스 추가하기
+                }
+            </script>
+            <div id="content"> </div>
+            <footer></footer>
+        </div>
+    </body>
+</html>
