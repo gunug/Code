@@ -1,0 +1,72 @@
+출처 = https://learn.microsoft.com/ko-kr/dotnet/csharp/tour-of-csharp/program-building-blocks
+
+멤버 : 멤버 class는 정적 멤버 또는 인스턴스 멤버입니다.
+다음은 클래스가 포함할 수 있는 멤버의 종류입니다.
+    상수 : 클래스와 연결된 상수값
+    필드 : 클래스와 연결된 변수
+    메서드 : 클래스에서 수행할 수 있는 작업
+    Properties : 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
+    인덱서 : 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
+    이벤트 : 클래스에 의해 생성될 수 있는 알림
+    연산자 : 클래스가 지우너하는 변환 및 식 연산자
+    생성자 : 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
+    종료자 : 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행한 작업
+    형식 : 클래스에 의해 선언된 중첩 형식
+
+접근성(접근제한자?) : 해당 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 수준
+    public:액세서가 제한되지 않음
+    private:이 클래스로만 액세스가 제한됨
+    protected:이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
+    internal:액세스가 현재 어셈블리(.exe 또는 .dll)로 제한됨
+    protected internal:액세스가 이 클래스, 이 클래스에서 파생된 클래스 또는 동일한 어셈블리 내의 클래스로만 제한됨
+    private protected:액세스가 이 클래스 또는 동일한 어셈블리 내의 이 형식에서 파생된 클래스로만 제한됩니다.
+
+필드 : 클래스 또는 클래스의 인스턴스와 연결된 변수
+    public static readonly Color Black = new(0,0,0);
+
+메서드 : 개체 또는 클래스에서 수행할 수 있는 계산이나 작업을 구현하는 멤버
+    public override string ToString() => "this is an object";
+
+매개 변수 : 메서드 값 또는 변수 참조를 전달하는 데 사용
+    해당 인수를 생략할 수 있도록 기본값을 지정하면 값 매개변수는 선택적일 수 있습니다.
+    값 매개 변수:매개 변수에 전달된 인수에서 초기 값을 가져오는 지역변수
+    참조 매개 변수:참조 매개 변수에 전달되는 인수는 한정된 값을 가진 변수여야 합니ㅏ. 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 스토리지 위치를 나타냅니다.
+
+    참조 매개 변수는 ref한정자를 사용하여 선언 됩니다.
+    static void Swap(ref int x, ref int y){
+        int temp = x;
+        x = y;
+        y = temp;
+    }
+    int i=1, j=2;
+    Swap(ref i, ref j);
+    Console.WriteLine($"{i} {j}");    // "2 1"
+    이렇게 전달하면 값이 전달되는것이 아닌 변수 참조가 전달되는구나
+
+    출력 매개 변수: 인수를 참조로 전달하는 데 사용됩니다. 호출자가 제공한 인수에 값을 명시적으로 할당할 필요가 없다는점 외에는 참조 매개 변수와 비슷합니다.
+    출력 매개 변수는 out 한정자를 사용하여 선언됩니다.
+    static void Divide(int x, int y, out int quotient, out int remainder){
+        quotient = x / y;
+        remainder = x % y;
+    }
+    Devide(10, 3, out int quo, out int rem);
+    Console.WriteLine($"{quo} {rem}");	// "3 1"
+
+    매개변수 배열: 배열 형식의 일반 매개 변수와 정확히 동일하게 동작합니다.
+    int x, y, z;
+    x = 3;
+    y = 4;
+    z = 5;
+    Console.WriteLine("x={0} y={1} z={2}", x, y, z);
+
+    int x = 3, y = 4, z = 5;
+    string s = "x={0} y={1} z={2}";
+    object[] args = new object[3];
+    args[0] = x;
+    args[1] = y;
+    args[2] = z;
+    Console.WriteLine(s, args);
+    쉼표 연속으로 들어가는 매개 변수를 배열 형식으로 넘길수 있다는 말인가, 받는 예시도 있었으면 좋겠네
+
+정적 메서드 : static 한정자를 사용하여 선언된 메서드는 특정 인스턴스에 작동하지 않고 정적 멤버에 직접적으로만 액세스 할 수 있다.
+객체 지향 프로그래밍(OOP)에서 인스턴스(instance)는 해당 클래스의 구조로 컴퓨터 저장공간에서 할당된 실체를 의미한다.
