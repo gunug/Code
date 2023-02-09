@@ -12,7 +12,7 @@ namespace root{
 
     public class generic_class<T>{
         
-        static T test;
+        //static T test;
         public generic_class(T i1, T i2){
             
         }

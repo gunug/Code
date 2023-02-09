@@ -7,4 +7,17 @@ public class accessor{
     private protected int value6; //액세스가 이클래스 또는 동일한 어셈블리내의 이 형식에서 파생된 클래스로만 제한됨
 
     public static readonly int value7; //읽기전용 정적변수
+
+    public void etc(){
+        value1 = 0;
+        value2 = 0;
+        Console.WriteLine(value2); //콘솔찍기 전에는 필드가 사용되지 않았습니다 warning뜨고 이거 있으니 안뜨는것 무엇
+        value3 = 0;
+        value4 = 0;
+        value5 = 0;
+        value6 = 0;
+    }
+    public static void etc_static(){
+        int get_value = value7;
+    }
 }

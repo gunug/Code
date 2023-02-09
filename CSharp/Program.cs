@@ -6,26 +6,31 @@
             Console.WriteLine("run!");
             Sub();
 
-            delegate_sample del_sam = new delegate_sample();
-            del_sam.init();
+            /*
+              delegate_sample del_sam = new delegate_sample();
+              del_sam.init();
 
-            generic_sample.CallShow();
+              generic_sample.CallShow();
 
-            Constant con = new Constant();
-            con.SaySomething();
+              Constant con = new Constant();
+              con.SaySomething();
 
-            OverloadingExample.UsageExample();
+              OverloadingExample.UsageExample();
 
+              Console.WriteLine("---------------");
+              Console.WriteLine(get_set.get_set_test);
+              get_set.get_set_test = 999;
+              Console.WriteLine(get_set.get_set_test);
+
+              Console.WriteLine("---------------");
+              array_example.array_sample();
+
+              Console.WriteLine("---------------");
+              lambda.start_lambda();
+            */
             Console.WriteLine("---------------");
-            Console.WriteLine(get_set.get_set_test);
-            get_set.get_set_test = 999;
-            Console.WriteLine(get_set.get_set_test);
-
-            Console.WriteLine("---------------");
-            array_example.array_sample();
-
-            Console.WriteLine("---------------");
-            lambda.start_lambda();
+            closure.start_sample();
+            closure.lambda_sample();
         }
         static void Sub(){
             Console.WriteLine("Hello, World!");
