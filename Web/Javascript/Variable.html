@@ -1,0 +1,20 @@
+<style>
+    div{border:solid;}
+</style>
+<div id="test_div">test</div>
+<script>
+    var bbb = "test_div";
+    var a1 = document.getElementById(bbb);
+    var a2 = document.getElementById("test_div");
+    a2.style.backgroundColor  = "red";
+    var color_name = "yellow";
+    color_name = "red";
+    document.getElementById("test_div").style.backgroundColor  = color_name;
+
+    function change_color(c_name){
+        document.getElementById("test_div").style.backgroundColor  = c_name;
+    }
+</script>
+
+<button onclick="change_color('blue')">change color blue</button>
+<button onclick="change_color('yellow')">change color yellow</button>
